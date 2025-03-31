@@ -14,10 +14,15 @@
     box-sizing: border-box;
 }
 
+:root{
+    --marrom-01: #a98467;
+    --marrom-02: #6c584c;
+}
+
 body, html{
     width: 100vw;
     height: 100vh;
-    background-color: #5f2c82;
+    background-color: var(--marrom-02);
 }
 
 main{
@@ -27,22 +32,26 @@ main{
 }
 
 section#login{
-    width: 250px;
-    height: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
+    
+    width: 250px;
+    height: 500px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.387);
     border-radius: 20px;
     background-color: white;
-    overflow: hidden;
+
+    transition: width 0.6s, height 0.6s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem{
     display: block;
     height: 200px;
-    background: #5f2c82 url(../imagens/pexels-predio.jpg) left bottom no-repeat;
+    background: #6c584c url(../imagens/pexels-predio.jpg) left bottom no-repeat;
     background-size: cover;
 }
 
